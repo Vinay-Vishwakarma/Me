@@ -37,8 +37,10 @@ body {
 
 
 .card {
-    display:grid;
-    place-items:center ;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    justify-content: center;
     width:247px;
     height:347px;
     background:#171614;
@@ -49,7 +51,7 @@ body {
     padding:1em;
     text-align:center ;
     cursor:pointer ;
-    transition:.5s ease;
+
 }
 
 .card:hover {
@@ -57,10 +59,10 @@ body {
 }
 
 .container:hover::before {
-    animation: effect 1.9s;
+    animation: cardEffect 1.9s;
 }
 
-@keyframes effect {
+@keyframes cardEfect {
     100% {
         transform:rotate(-45deg) translate(0, 450px);
     }
